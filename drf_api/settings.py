@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 if os.path.exists('env.py'):
     import env
 
@@ -34,7 +34,8 @@ SECRET_KEY = 'django-insecure-19&cj#g^cnbi0z^rb3xc4suj&+4xokb_gb1@%$k9fa$6#9_xsw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-bhagyashriyogesh-drfapi-tzyfgtqpk4e.ws.codeinstitute-ide.net',
+                '.herokuapp.com']
 
 
 # Application definition
@@ -48,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
+
+    'profiles',
 ]
 
 MIDDLEWARE = [
